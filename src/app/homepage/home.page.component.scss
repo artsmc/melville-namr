@@ -1,76 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Shrikhand&display=swap');
+@import '~animate.css/animate.min';
 .home {
   position: relative;
   background-color: rgb(255, 255, 255);
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
-}
-.title {
-  position: relative;
-  display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.headline {
+  display: flex;
+  text-align: center;
+  color: antiquewhite;
+  font-smooth: initial;
+  font-weight: 100;
+  font-size: 140%;
   align-content: center;
-  width: 200px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  h1 {
+    font-weight: 400;
+  }
+}
+.form {
+  margin: 20px;
   padding: 20px;
-  .brand {
-    font-size: 120%;
-    font-family: 'Shrikhand', cursive;
-    color: var(--color-primary-400);
-  }
-  .melville {
-    margin-bottom: 10px;
-  }
-  h1,
-  small,
-  span,
-  p {
-    font-size: 80%;
-    text-align: center;
-  }
+  display: flex;
+  min-height: 20vh;
+  min-width: 50vw;
+  position: relative;
+  flex-direction: column;
 }
 
+[class^='part-'] {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  &[data-visible='false'],
+  &[data-visible] {
+    display: none;
+  }
+  &[data-visible='true'] {
+    display: flex;
+  }
+  &.show {
+    opacity: 1;
+  }
+  &.hide {
+    opacity: 0;
+  }
+}
+.form-content {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+.text-input {
+  padding: 0px 20px;
+  textarea {
+    border: 1px solid #dbdbdb;
+  }
+}
+.test {
+  border: 1px dashed #fff;
+}
 .background-gd {
-  background: linear-gradient(198deg, #ffffff, #dcdbdb, #f0e9e9);
-  background-size: 600% 600%;
-
-  -webkit-animation: gradientMover 30s ease infinite;
-  -moz-animation: gradientMover 30s ease infinite;
-  animation: gradientMover 30s ease infinite;
+  background: linear-gradient(207deg, #212022, #5a525c);
+  background-size: 100% 100%;
+  animation: gradientMover 59s ease infinite;
 }
 
-@-webkit-keyframes gradientMover {
-  0% {
-    background-position: 30% 0%;
-  }
-  50% {
-    background-position: 71% 100%;
-  }
-  100% {
-    background-position: 30% 0%;
-  }
-}
-@-moz-keyframes gradientMover {
-  0% {
-    background-position: 30% 0%;
-  }
-  50% {
-    background-position: 71% 100%;
-  }
-  100% {
-    background-position: 30% 0%;
-  }
-}
 @keyframes gradientMover {
   0% {
-    background-position: 30% 0%;
+    background-position: 88% 0%;
   }
   50% {
-    background-position: 71% 100%;
+    background-position: 13% 100%;
   }
   100% {
-    background-position: 30% 0%;
+    background-position: 88% 0%;
   }
 }

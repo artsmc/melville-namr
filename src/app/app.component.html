@@ -1,13 +1,25 @@
 <div class="app">
-  <router-outlet></router-outlet>
-</div>
-<footer>
-  <div class="split">
-    <div class="col">
-      <small>© 2020 Melville Technologies Inc</small>
+  <header class="sticky">
+    <div class="title">
+      <h1 class="brand">Namr</h1>
+      <span>by</span>
+      <h1 class="melville">Melville</h1>
     </div>
-    <div class="col">
-      <small>Terms & Privacy</small>
-    </div>
+  </header>
+  <div class="content">
+    <router-outlet></router-outlet>
   </div>
-</footer>
+  <footer class="">
+    <div class="split">
+      <div class="col">
+        <small>© 2020 Melville Technologies Inc</small>
+      </div>
+      <div class="col">
+        <small
+          >Made with <i class="fa-solid fa-heart"></i> by Melville
+          Technologies</small
+        >
+      </div>
+    </div>
+  </footer>
+</div>
