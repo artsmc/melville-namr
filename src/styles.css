@@ -1,8 +1,8 @@
-/* Add application styles & imports to this file! */
-/* Box sizing rules */
+@import '~animate.css/animate.min';
+@import 'app';
+/* Add application styles & imports to this file! */ /* Box sizing rules */
 *,
-*::before,
-*::after {
+  *: : before, *: : after {
   box-sizing: border-box;
 }
 
